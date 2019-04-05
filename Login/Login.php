@@ -1,6 +1,7 @@
 <?php
 
 include "../DBconnection/DBconnection.php";
+include "../password.php";
 
 
 
