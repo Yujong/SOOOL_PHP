@@ -17,13 +17,25 @@ ini_set('display_errors', '1');
 
 $image_save_dir = "../qnaImage";
 
-$image_save_name = $_FILES['description']['name'];
+$image_save_name = $_FILES['upload']['name'];
 
-$image_save_path = $image_save_dir ."/". $image_save_name;
+$name = $_POST['name'];
 
-$image_tmp_name = $_FILES['description']['tmp_name'];
+$accountNick = $_POST['accountNick'];
+
+$image_save_path = $image_save_dir ."/".$name.$accountNick.$image_save_name;
+
+$image_tmp_name = $_FILES['upload']['tmp_name'];
+
+//name
+
+//accountNick
 
 move_uploaded_file("$image_tmp_name","$image_save_path");
+
+
+
+
 
 //for ($i = 0;$i < $image_array_count;$i++)
 //{
