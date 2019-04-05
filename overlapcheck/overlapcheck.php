@@ -1,7 +1,7 @@
 <?php
 include "../DBconnection/DBconnection.php";
 
-$separator = $_POST['emailOrnick'];
+$separator = $_POST['separator'];
 
 $accountEmail = $_POST['accountEmail'];
 $accountNick = $_POST['accountNick'];
@@ -53,7 +53,10 @@ else
     }
 }
 
-echo json_encode($result);
+
+
+header('Content-Type: application/json');
+echo json_encode(array($result));
 
 //
 //function Emailcheck($email,$connect)
